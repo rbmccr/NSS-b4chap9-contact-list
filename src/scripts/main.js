@@ -1,8 +1,13 @@
-import sayHello from "./hello"
-import sayGoodbye from "./goodbye"
-import SandwichMaker from "./sandwichMaker"
+// In main.js, import the ContactList component and the
+// ContactForm component.
 
-sayHello()
-sayGoodbye()
+// import retrieveData from "./contactList"
+import article from "./contactList";
+import form from "./formBuilder"
 
-SandwichMaker.placeOrder("rye", "capicola", "provolone")
+const formContainer = document.getElementById("formContainer");
+formContainer.appendChild(form);
+
+const infoContainer = document.getElementById("infoContainer")
+article.id = "outputContacts"
+infoContainer.appendChild(article)
