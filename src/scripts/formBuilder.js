@@ -1,36 +1,28 @@
-const form = document.createElement("form");
+class formElement {
 
-function makeFieldset(lbl_txt, inpt_type, inpt_id) {
-  const fset = document.createElement("fieldset");
-  const lbl = document.createElement("label");
-  const inpt = document.createElement("input");
+  makeFieldset(lbl_txt, inpt_type, inpt_id) {
+    const fset = document.createElement("fieldset");
+    const lbl = document.createElement("label");
+    const inpt = document.createElement("input");
 
-  lbl.textContent = lbl_txt;
-  lbl.setAttribute("for", inpt_id)
-  inpt.setAttribute("type", inpt_type);
-  inpt.setAttribute("id", inpt_id);
-  fset.appendChild(lbl);
-  fset.appendChild(inpt);
-  form.appendChild(fset);
+    lbl.textContent = lbl_txt;
+    lbl.setAttribute("for", inpt_id);
+    inpt.setAttribute("type", inpt_type);
+    inpt.setAttribute("id", inpt_id);
+    fset.appendChild(lbl);
+    fset.appendChild(inpt);
+    return fset;
+  }
+
+  makeButton() {
+    const btn = document.createElement("button");
+    btn.id = "savePerson";
+    btn.textContent = "Save to Database";
+    return btn;
+  }
+
 }
 
-//firstname
-makeFieldset("First name", "text", "firstName");
+const createForm = () => new formElement();
 
-//lastname
-makeFieldset("Last name", "text", "lastName");
-
-//phone
-makeFieldset("Phone number", "phone", "phone");
-
-//address
-makeFieldset("Address", "text", "address");
-
-//button
-const btn = document.createElement("button");
-btn.id = "savePerson";
-btn.textContent = "Save to Database"
-form.appendChild(btn);
-
-//build form
-export default form
+export default createForm;

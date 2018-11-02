@@ -3,15 +3,20 @@
 import profileBuilder from "./contact";
 import DatabaseInteraction from "./contactCollection";
 
-let article = document.createElement("article");
+function generateList() {
 
-DatabaseInteraction().loadDatabaseInfo().then(data =>
-  data.forEach(obj => {
-  let fn = obj.firstname;
-  let ln = obj.lastname;
-  let ph = obj.phone;
-  let ad = obj.address;
-  article.appendChild(profileBuilder(fn, ln, ph, ad));
-  }));
+  let article = document.createElement("article");
 
-  export default article;
+  DatabaseInteraction().loadDatabaseInfo().then(data =>
+    data.forEach(obj => {
+    let fn = obj.firstname;
+    let ln = obj.lastname;
+    let ph = obj.phone;
+    let ad = obj.address;
+    article.appendChild(profileBuilder(fn, ln, ph, ad));
+    }));
+
+  return article;
+}
+
+export default generateList;

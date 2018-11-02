@@ -2,12 +2,11 @@
 // ContactForm component.
 
 // import retrieveData from "./contactList"
-import article from "./contactList";
-import form from "./formBuilder"
+import generateList from "./contactList";
+import form from "./contactForm"
 
 const formContainer = document.getElementById("formContainer");
 formContainer.appendChild(form);
 
 const infoContainer = document.getElementById("infoContainer")
-article.id = "outputContacts"
-infoContainer.appendChild(article)
+infoContainer.appendChild(generateList());
