@@ -46,4 +46,5 @@ form.childNodes[4].addEventListener("click", (e) => {
   address.value = "";
 });
 
+//send completed form with event listener to main.js
 export default form

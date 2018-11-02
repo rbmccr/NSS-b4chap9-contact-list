@@ -8,11 +8,25 @@
       "address": "123 yeah right ave"
     },
     {
-      "firstname": "a",
-      "lastname": "b",
-      "phone": "c",
-      "address": "d",
+      "firstname": "Ousama",
+      "lastname": "Elayan",
+      "phone": "123-123-1234",
+      "address": "Somewhere near here",
       "id": 2
+    },
+    {
+      "firstname": "Joe",
+      "lastname": "Shepherd",
+      "phone": "456-456-4567",
+      "address": "Are you reading this?",
+      "id": 3
+    },
+    {
+      "firstname": "Another one for fun",
+      "lastname": "Yep",
+      "phone": "987-987-9876",
+      "address": "Time for the weekend!",
+      "id": 4
     }
   ]
 }

@@ -6,20 +6,31 @@
 
 html, body {
   min-height: 100%;
-}
-
-#formContainer {
-  margin: 0 auto;
-  padding: 10px;
-  height: 300px;
-  width: 960px;
-  background-color: aquamarine;
+  background-color: #007ac1;
 }
 
 #infoContainer {
   margin: 0 auto;
-  padding: 10px;
-  background-color: lightblue;
-  min-height: calc(100vh - 300px);
+  padding: 20px;
+  background-color: #01a9f4;
+  min-height: calc(100vh - 325px);
   width: 960px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+#people {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#people > section {
+  flex-basis: 45%;
+  padding: 7.5px;
+  margin: 0 auto 20px auto;
+  background-color: #67daff;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
