@@ -6,6 +6,20 @@
       "lastname": "McCray",
       "phone": "859-993-9345",
       "address": "123 yeah right ave"
+    },
+    {
+      "firstname": {},
+      "lastname": {},
+      "phone": {},
+      "address": {},
+      "id": 2
+    },
+    {
+      "firstname": "Brendan",
+      "lastname": "McCray",
+      "phone": "1231231234",
+      "address": "444 Elm",
+      "id": 3
     }
   ]
 }

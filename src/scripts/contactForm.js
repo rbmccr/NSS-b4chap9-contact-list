@@ -13,16 +13,17 @@ form.appendChild(createForm().makeFieldset("First name", "text", "firstName"));
 form.appendChild(createForm().makeFieldset("Last name", "text", "lastName"));
 form.appendChild(createForm().makeFieldset("Phone number", "phone", "phone"));
 form.appendChild(createForm().makeFieldset("Address", "text", "address"));
-form.appendChild(createForm().makeButton());
+form.appendChild(createForm().makeButton("savePerson", "Save to database"));
 
 //add event listener to button
 form.childNodes[4].addEventListener("click", (e) => {
   e.preventDefault();
-  const first_name = document.getElementById("firstName");
-  console.log(first_name.value)
-  const first_name = document.getElementById("lastName");
-  const first_name = document.getElementById("phone");
-  const first_name = document.getElementById("address");
-})
+  const first_name = document.getElementById("firstName").value;
+  const last_name = document.getElementById("lastName").value;
+  const phone = document.getElementById("phone").value;
+  const address = document.getElementById("address").value;
+
+  DatabaseInteraction().saveInfoToDatabase(first_name, last_name, phone, address);
+});
 
 export default form

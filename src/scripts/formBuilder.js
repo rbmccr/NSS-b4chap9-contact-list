@@ -14,10 +14,10 @@ class formElement {
     return fset;
   }
 
-  makeButton() {
+  makeButton(btn_id, btn_text) {
     const btn = document.createElement("button");
-    btn.id = "savePerson";
-    btn.textContent = "Save to Database";
+    btn.id = btn_id;
+    btn.textContent = btn_text;
     return btn;
   }
 
