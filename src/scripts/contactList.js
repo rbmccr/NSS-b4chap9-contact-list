@@ -6,6 +6,7 @@ import DatabaseInteraction from "./contactCollection";
 function generateList() {
 
   let article = document.createElement("article");
+  article.id = "people"
 
   DatabaseInteraction().loadDatabaseInfo().then(data =>
     data.forEach(obj => {

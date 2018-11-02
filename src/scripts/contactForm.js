@@ -4,7 +4,8 @@
 
 //import the form to get access to element ID's
 import DatabaseInteraction from "./contactCollection";
-import createForm from "./formBuilder"
+import createForm from "./formBuilder";
+import profileBuilder from "./contact";
 
 //access the form class methods and create a new form
 const form = document.createElement("form");
@@ -17,13 +18,32 @@ form.appendChild(createForm().makeButton("savePerson", "Save to database"));
 
 //add event listener to button
 form.childNodes[4].addEventListener("click", (e) => {
+  //don't submit form data
   e.preventDefault();
-  const first_name = document.getElementById("firstName").value;
-  const last_name = document.getElementById("lastName").value;
-  const phone = document.getElementById("phone").value;
-  const address = document.getElementById("address").value;
+  //identify input elements in form
+  const fname = document.getElementById("firstName");
+  const lname = document.getElementById("lastName");
+  const phone = document.getElementById("phone");
+  const address = document.getElementById("address");
 
-  DatabaseInteraction().saveInfoToDatabase(first_name, last_name, phone, address);
+  //post input element values to database and then append entry as a new
+  //section element that is in the article element (contained in #infoContainer)
+  DatabaseInteraction().saveInfoToDatabase(fname.value, lname.value, phone.value, address.value).then(objData => {
+    const fname = objData.firstname;
+    const lname = objData.lastname;
+    const phone = objData.phone;
+    const address = objData.address;
+
+    const article = document.getElementById("people")
+
+    article.appendChild(profileBuilder(fname, lname, phone, address));
+  });
+
+  //empty inputs in form
+  fname.value = "";
+  lname.value = "";
+  phone.value = "";
+  address.value = "";
 });
 
 export default form

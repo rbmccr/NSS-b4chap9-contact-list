@@ -8,18 +8,11 @@
       "address": "123 yeah right ave"
     },
     {
-      "firstname": {},
-      "lastname": {},
-      "phone": {},
-      "address": {},
+      "firstname": "a",
+      "lastname": "b",
+      "phone": "c",
+      "address": "d",
       "id": 2
-    },
-    {
-      "firstname": "Brendan",
-      "lastname": "McCray",
-      "phone": "1231231234",
-      "address": "444 Elm",
-      "id": 3
     }
   ]
 }
